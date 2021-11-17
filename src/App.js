@@ -1,23 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "./compoents/Header";
+import Hero from "./compoents/Hero";
+import Footer from "./compoents/Footer";
+import Card from "./compoents/Card";
+import cardData from "./compoents/CardData";
+import "./style.css";
+import React, { useState } from "react";
 
 function App() {
+  let [favImg, setfavImg] = useState([]);
+
+  // return all favourite images
+  function getFavImage(imgSrc) {
+    setfavImg([...favImg, imgSrc]);
+  }
+
+  let userFavimg = favImg.map((imgsrc) => {
+    return <img src={imgsrc}></img>;
+  });
+
+  let card = cardData.map((cardData) => {
+    return (
+      <Card
+        cardContent={{
+          imgSrc: cardData.imgSrc,
+          description: cardData.description,
+          name: cardData.name,
+        }}
+        getFavImage={getFavImage}
+      />
+    );
+  });
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Hero />
+      <h3>Destinations</h3>
+      <div className="container">{card}</div>
+      <aside>{userFavimg}</aside>
+      <Footer />
     </div>
   );
 }

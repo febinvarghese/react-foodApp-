@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+.App {
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  font-weight: 600;
+}
+
+.display-flex {
+  display: flex;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header .logo {
+  font-size: 18px;
+  background-color: black;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+header {
+  background-color: black;
+  padding: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .nav a {
+  color: white;
+  display: block;
+  margin: 0 5px;
+  padding: 5px;
+}
+
+.nav a:hover {
+  color: lightgreen;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+footer {
+  background-color: black;
+  padding: 20px;
+  height: 10vh;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: 1px solid white;
+}
+
+footer p {
+  color: white;
+}
+
+/* hero  */
+
+.hero {
+  padding: 20px;
+  background-color: lightskyblue;
+  height: 40vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* background image style */
+.hero {
+  background-image: url("https://images.unsplash.com/photo-1488415032361-b7e238421f1b?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8bm9ydGhlcm4lMjBsaWdodHN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.App h3 {
+  color:white;
+  position: absolute;
+  top: 53%;
+  left: 50px;
+  font-size: 25px;  
+  font-weight: bold;
+}
+
+/* CARD .CSS */
+
+.card {
+  text-align: left;
+  margin: 18px;
+  color: white;
+}
+
+.card p {
+  font-weight: normal;
+  padding-top: 10px;
+}
+
+.container {
+  height: 470px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  
+  background-color: black; 
+
+
+}
+
+.card img {
+  width: 300px;
+  height: 200px;
+  margin-top: 15px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  object-fit: cover;
+}
+
+.card-btn {
+
+  margin-top: 25px;
+  padding: 10px;
+  color:white;
+  background-color:orange;
+  border: none ;
+  border-radius: 10px;
+  text-align: center;
+
+
+}
+
+.active{
+  background-color:rgb(233, 233, 82);
+  border: none;
+  border-radius: 10px;
+  color: black;
+  padding: 9px;
+}
+
+
+
+
+/* favourites */
+
+aside{
+  height: 400px;
+  display: flex;
+  align-items: center;
+  outline: 1px solid white;
+  background-color: black;
+  color: white;
+}
+
+aside img{
+  width: 400px;
+  height: 200px;
+  border-radius: 10px;
+}
