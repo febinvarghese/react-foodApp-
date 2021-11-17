@@ -14,7 +14,8 @@ function Card(props) {
       if (prevState === "add to favourites") {
           props.getFavImage(imgSrc)
         return "thanks";
-      } else {
+      } else { 
+          props.removeFavImage(imgSrc)
         return "add to favourites";
       }
     });

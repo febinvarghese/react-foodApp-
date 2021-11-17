@@ -18,6 +18,16 @@ function App() {
     return <img src={imgsrc}></img>;
   });
 
+  function removeFavImage(imgSrc) {
+    setfavImg(
+      [...favImg].filter((currentImg) => {
+        console.log(currentImg);
+        return currentImg != imgSrc;
+      
+      })
+    );
+  }
+
   let card = cardData.map((cardData) => {
     return (
       <Card
@@ -27,6 +37,7 @@ function App() {
           name: cardData.name,
         }}
         getFavImage={getFavImage}
+        removeFavImage={removeFavImage}
       />
     );
   });
@@ -37,7 +48,9 @@ function App() {
       <Hero />
       <h3>Destinations</h3>
       <div className="container">{card}</div>
-      <aside>{userFavimg}</aside>
+      <div className="aside-container">
+        <aside>{userFavimg}</aside>
+      </div>
       <Footer />
     </div>
   );
