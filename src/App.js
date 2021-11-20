@@ -3,6 +3,8 @@ import Hero from "./compoents/Hero";
 import Footer from "./compoents/Footer";
 import Card from "./compoents/Card";
 import cardData from "./compoents/CardData";
+import Counter from "./compoents/classCompoent";
+import Meal from "./compoents/MealApi"
 import "./style.css";
 import React, { useState } from "react";
 
@@ -51,6 +53,8 @@ function App() {
       <div className="aside-container">
         <aside>{userFavimg}</aside>
       </div>
+      <Counter/>
+      <Meal/>
       <Footer />
     </div>
   );
